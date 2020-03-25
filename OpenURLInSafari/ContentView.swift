@@ -10,7 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            Text("iPad's are great!")
+            Button(action: {
+                UIApplication.shared.open(URL(string: "http://apple.com/2WEZU5W")!)
+            }) {
+                Text("Learn more")
+                    .bold()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+            }
+        }
     }
 }
 
